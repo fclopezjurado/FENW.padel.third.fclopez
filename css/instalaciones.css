@@ -1,0 +1,26 @@
+/* CSS styles for "instalaciones.html" page */
+
+#formContainer {
+    background-color: #96ee7e;
+    padding: 20px;
+    height: 400px;
+}
+
+#mapContainer {
+    padding: 10px;
+    height: 100%;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+#listContainer {
+    margin-top: 25%;
+    margin-bottom: 25%;
+    border: 1px solid #1d760d;
+    border-radius: 5px;
+    padding: 10px;
+}
