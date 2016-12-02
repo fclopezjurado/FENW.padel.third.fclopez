@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPM - Padel</title>
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1-dist/css/jquery-ui.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="css/navigationBar.css">
+    <script src="lib/jquery-3.1.1-dist/jquery-3.1.1.min.js"></script>
+    <script src="lib/jquery-ui-1.12.1-dist/js/jquery-ui.min.js"></script>
+    <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="lib/angular-1.6.0-rc.2/angular.min.js"></script>
+    <script src="lib/angular-1.6.0-rc.2/angular-route.min.js"></script>
+    <script src="lib/angular-1.6.0-rc.2/angular-css.min.js"></script>
+    <script src="application.js"></script>
+    <script src="directives/datePicker.directive.js"></script>
+    <script src="services/login.service.js"></script>
+    <script src="services/checkUserName.service.js"></script>
+    <script src="services/checkUserMail.service.js"></script>
+    <script src="services/signUp.service.js"></script>
+    <script src="services/bookCourt.service.js"></script>
+    <script src="controllers/index.controller.js"></script>
+    <script src="controllers/login.controller.js"></script>
+    <script src="controllers/signUp.controller.js"></script>
+    <script src="controllers/bookCourt.controller.js"></script>
+    <script src="config/routes.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row navigationBar" ng-controller="IndexController as indexController">
+        <div class="col-md-12">
+            <div id="logoContainer">
+                <a href="https://www.upm.es">
+                    <img id="logo" alt="ETSISI Icon" src="img/etsisi.png" class="img-rounded smallRightMargin"/>
+                </a>
+                <span id="logoTitle">Padel UPM</span>
+            </div>
+            <ul class="nav nav-pills">
+                <li>
+                    <a ng-href="#!/">Inicio</a>
+                </li>
+                <li>
+                    <a ng-href="#!/">Servicios</a>
+                </li>
+                <li>
+                    <a ng-href="#!/instalaciones">Instalaciones</a>
+                </li>
+                <li>
+                    <a ng-href="#!/reservar">Reservar</a>
+                </li>
+                <li class="pull-right">
+                    <a ng-href="#!/login"><span class="glyphicon glyphicon-log-in smallRightMargin"></span>
+                        {{indexController.login}}</a>
+                </li>
+                <li class="pull-right">
+                    <a ng-href="#!/registro"><span class="glyphicon glyphicon-user smallRightMargin"></span>Registro</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section ng-view></section>
+</div>
+</body>
+</html>
